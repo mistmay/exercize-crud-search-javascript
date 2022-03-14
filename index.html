@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Giuseppe Marchesiello">
+    <meta name="description" content="Exercize Html Javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CRUD Exercize</title>
+</head>
+
+<body>
+    <section>
+        <label for="type-search">Search By:</label>
+        <select id="type-search" name="type-search">
+            <option value="search-by-id" selected>ID</option>
+            <option value="search-by-city">City</option>
+        </select>
+        <label for="show-order">Order By</label>
+        <select id="show-order" name="show-order">
+            <option value="show-all-id" selected>ID</option>
+            <option value="show-all-age-crescent">Age (crescent)</option>
+            <option value="show-all-age-decrescent">Age (decrescent)</option>
+        </select>
+        <input type="text" placeholder="Search">
+    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="assets/js/index.js" type="module"></script>
+</body>
+
+</html>
