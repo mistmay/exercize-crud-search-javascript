@@ -82,7 +82,6 @@ export function inputWatcher() {
     const inputValue = document.querySelector('input').value;
     const tbody = document.querySelector('tbody');
     if (inputValue === '' || inputValue === ' ') {
-        generateTable(userArray);
         currentTable = userArray;
         changeOrder();
     } else {
@@ -103,7 +102,6 @@ export function inputWatcher() {
                 tbody.append(generateRow(noResult));
                 currentTable = [];
             } else {
-                generateTable(result);
                 currentTable = result;
                 changeOrder();
             }
