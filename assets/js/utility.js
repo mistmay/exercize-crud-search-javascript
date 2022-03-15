@@ -44,11 +44,11 @@ function removeAllRows() {
 }
 
 function searchById(id) {
-    return userArray.find(element => String(element.id).includes(id));
+    return userArray.find(element => String(element.id).includes(id.trim()));
 }
 
 function filterByCity(city) {
-    return userArray.filter(element => element.location.city.toLowerCase().includes(city.toLowerCase()));
+    return userArray.filter(element => element.location.city.toLowerCase().includes(city.toLowerCase().trim()));
 }
 
 function sortByAgeCrescent(array) {
@@ -81,7 +81,7 @@ function changeOrder() {
 export function inputWatcher() {
     const inputValue = document.querySelector('input').value;
     const tbody = document.querySelector('tbody');
-    if (inputValue === '' || inputValue === ' ') {
+    if (inputValue === '') {
         currentTable = userArray;
         changeOrder();
     } else {
